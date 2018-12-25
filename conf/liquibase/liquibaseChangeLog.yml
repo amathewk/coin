@@ -1,0 +1,51 @@
+#databaseChangeLog:
+#  - preConditions:
+#    - runningAs:
+#        username: amathew
+#
+#  - changeSet:
+#      id: 1
+#      author: amathew
+#      changes:
+#        - createTable:
+#            tableName: transaction
+#            columns:
+#              - column:
+#                  name: id
+#                  type: int
+#                  autoIncrement: true
+#                  constraints:
+#                    primaryKey: true
+#                    nullable: false
+#              - column:
+#                  name: merchant
+#                  type: varchar(100)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: amount
+#                  type: double
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: source
+#                  type: varchar(100)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: memo
+#                  type: varchar(100)
+#                  constraints:
+#                    nullable: false
+#
+##  - changeSet:
+##      id: 2
+##      author: nvoxland
+##      changes:
+##        - addColumn:
+##            tableName: person
+##            columns:
+##              - column:
+##                  name: username
+##                  type: varchar(8)
+##
